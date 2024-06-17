@@ -1,9 +1,0 @@
-{
-  "type": "record",
-  "name": "TruckKey",
-  "namespace": "com.example",
-  "fields": [
-    {"name": "customer", "type": "string"},
-    {"name": "vehicle", "type": "string"}
-  ]
-}
