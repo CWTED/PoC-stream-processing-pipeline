@@ -12,3 +12,7 @@ The compose file also lets you choose the desired parallelism degree to use with
 The Kafka producer and Flink logic also require IP addresses for where the brokers and the schema registry are hosted. Currently, these fields are filled with placeholders. Please change to your desired addresses, and make sure it consistent with the docker-compose configuration.
 
 To compile a JAR of the Flink job, run "mvn clean package" in the PoC_Pipeline folder (or use an IDE of your choice). The location of the JAR has to be specified in the docker-compose file (for both the JobManager and the TaskManager(s)). Change the path as required.
+
+## Pipeline structure overview
+
+![Pipeline structure image](Pipeline-Structure.png)
