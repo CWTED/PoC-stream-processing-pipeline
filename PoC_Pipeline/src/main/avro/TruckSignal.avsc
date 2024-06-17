@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TruckSignal",
+  "namespace": "com.schemas",
+  "fields": [
+    {"name": "customer", "type": "string"},
+    {"name": "vehicle", "type": "string"},
+    {"name": "signal", "type": "string"},
+    {"name": "value", "type": "float"},
+    {"name": "padding", "type": "string"},
+    {"name": "timestamp",
+     "type": {
+      "type": "long",
+      "logicalType": "local-timestamp-millis"
+     }
+    }
+  ]
+}

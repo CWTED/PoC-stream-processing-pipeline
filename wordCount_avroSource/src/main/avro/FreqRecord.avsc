@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "FreqRecord",
+  "namespace": "com.example",
+  "fields": [
+    {"name": "eventTime",
+      "type": {
+        "type": "long",
+        "logicalType": "local-timestamp-millis"
+      }
+    },
+    {"name": "aggEndTime",
+          "type": {
+            "type": "long",
+            "logicalType": "local-timestamp-millis"
+          }
+        },
+    {"name": "customer", "type": "string"},
+    {"name": "vehicle", "type": "string"},
+    {"name": "signal", "type": "string"},
+    {"name": "minFreq", "type": "int"},
+    {"name": "hourFreq", "type": "int"},
+    {"name": "dayFreq", "type": "int"},
+    {"name": "granularity", "type": "string"}
+  ]
+}
