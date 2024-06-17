@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Druid Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <h1>Fetch Data from Express.js Server</h1>
+    <button id="fetchButton">Fetch Data</button>
+    <div id="result">hej</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fetchButton = document.getElementById('fetchButton');
+            const resultDiv = document.getElementById('result');
+
+            fetchButton.addEventListener('click', () => {
+                const url = 'http://localhost:3000'; // URL of your Express.js server
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json(); // Parse the JSON response
+                    })
+                    .then(data => {
+                        // Update the content of the <div> with the fetched data
+                        resultDiv.textContent = JSON.stringify(data);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                    });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
